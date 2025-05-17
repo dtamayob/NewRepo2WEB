@@ -1,0 +1,60 @@
+﻿@model ProyectoWEB.Models.Persona
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Formulario de Registro</h2>
+
+    <form asp-action="Create" asp-controller="Registro" method="post" class="row g-3 needs-validation" novalidate>
+        <div class="col-md-6">
+            <label asp-for="NombreCompleto" class="form-label">@Html.DisplayNameFor(m => m.NombreCompleto)</label>
+            <input asp-for="NombreCompleto" class="form-control" required />
+        </div>
+
+        <div class="col-md-6">
+            <label asp-for="Usuario" class="form-label">@Html.DisplayNameFor(m => m.Usuario)</label>
+            <input asp-for="Usuario" class="form-control" required />
+        </div>
+
+        <div class="col-md-6">
+            <label asp-for="Contrasena" class="form-label">@Html.DisplayNameFor(m => m.Contrasena)</label>
+            <input asp-for="Contrasena" type="password" class="form-control" required />
+        </div>
+
+        <div class="col-md-6">
+            <label asp-for="Correo" class="form-label">@Html.DisplayNameFor(m => m.Correo)</label>
+            <input asp-for="Correo" type="email" class="form-control" required />
+        </div>
+
+        <div class="col-md-6">
+            <label asp-for="Sexo" class="form-label">@Html.DisplayNameFor(m => m.Sexo)</label>
+            <select asp-for="Sexo" class="form-select" required>
+                <option disabled selected value="">Seleccione...</option>
+                <option>Masculino</option>
+                <option>Femenino</option>
+                <option>Otro</option>
+            </select>
+        </div>
+
+        <div class="col-md-6">
+            <label asp-for="Ciudad" class="form-label">@Html.DisplayNameFor(m => m.Ciudad)</label>
+            <input asp-for="Ciudad" class="form-control" required />
+        </div>
+
+        <div class="col-md-6">
+            <label asp-for="Ciudad" class="form-label">@Html.DisplayNameFor(m => m.Ciudad)</label>
+            <input asp-for="Ciudad" class="form-control" required />
+        </div>
+
+        <div class="col-12">
+            <div class="form-check">
+                <input asp-for="AceptaTerminos" class="form-check-input" type="checkbox" />
+                <label asp-for="AceptaTerminos" class="form-check-label">
+                    @Html.DisplayNameFor(m => m.AceptaTerminos)
+                </label>
+            </div>
+        </div>
+
+        <div class="col-12 text-center mt-3">
+            <button type="submit" class="btn btn-success px-4">Registrarse</button>
+        </div>
+    </form>
+</div>

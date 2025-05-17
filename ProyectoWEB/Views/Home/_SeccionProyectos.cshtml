@@ -1,0 +1,11 @@
+﻿@model IEnumerable<Proyecto>
+
+@if (Model is not null)
+{
+    <div class="text-center" style="padding-top: 6rem;">
+        <h1>Recestas Recomendadas</h1>
+        <p>Tendras una gran variedad de recetas sin embargo esta es la sección recomendada.</p>
+    </div>
+
+   <partial name="_ListadoProyectos" model="Model" />
+}
